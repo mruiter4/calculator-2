@@ -28,5 +28,33 @@ def calculate():
         if len(equation_tokens) > 2:
             num2 = validate_numeric_input(equation_tokens[2])
 
+        if equation_tokens[0] == '+':
+            result = add(num1, num2)
+           
+        elif equation_tokens[0] == '-':
+            result = subtract(num1, num2)
+            
+        elif equation_tokens[0] == '*':
+            result = multiply(num1, num2)
+
+        elif equation_tokens[0] == '/':
+            result = divide(num1, num2)
+
+        elif equation_tokens[0] == 'square':
+            result = square(num1)
+
+        elif equation_tokens[0] == 'cube':
+            result = cube(num1)
+
+        elif equation_tokens[0] == 'pow':
+            result = power(num1, num2)
+
+        elif equation_tokens[0] == 'mod':
+            result = mod(num1, num2)
+             
+        else:
+            print('Please enter a valid operator')
+            continue
+        print(result)
 
 calculate()
