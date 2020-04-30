@@ -27,6 +27,7 @@ def calculate():
         num1 = validate_numeric_input(equation_tokens[1])
         if len(equation_tokens) > 2:
             num2 = validate_numeric_input(equation_tokens[2])
+        if len(equation_tokens) >3:
             num3 = validate_numeric_input(equation_tokens[3])
 
         if equation_tokens[0] == '+':

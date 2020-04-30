@@ -27,11 +27,10 @@ def calculate():
 
         operator, *num_tokens = equation_tokens
         nums = validate_numeric_input(num_tokens)
-        if (operator not in ['cube', 'square'] and len(num_tokens) < 2) or 
+        if (operator not in ['cube', 'square'] and len(num_tokens) < 2) or \
             (operator == 'x+' and len(num_tokens) <3):
             print("You didn't enter enough operands for this equation. Try again")
             continue
-
 
         if equation_tokens[0] == '+':
             result = add(nums[0], nums[1])
